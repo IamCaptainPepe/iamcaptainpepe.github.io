@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evgeny Purkov — CaptainPepe | OG · CyRunner</title>
+  <meta name="description" content="Evgeny Purkov (CaptainPepe) — crypto operator, GPU node runner, community guy and local meme maker. OG &amp; CyRunner Ambassador. Own hardware, own bots, own memes.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Evgeny Purkov — CaptainPepe | OG · CyRunner">
+  <meta property="og:description" content="GPU nodes, honest bots, grown communities, official-grade memes — all from one operator.">
+  <meta property="og:image" content="https://iamcaptainpepe.github.io/portfolio-site/assets/og-cover.png">
+  <meta name="theme-color" content="#050816">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/avatar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <noscript><style>[data-lucide]{display:none!important}</style></noscript>
+</head>
+<body>
+  <!-- ambient layers -->
+  <div class="aurora" aria-hidden="true">
+    <span class="aur b1"></span>
+    <span class="aur b2"></span>
+    <span class="aur b3"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="topbar" id="top">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark">CP</span>
+        <span class="brand-text">
+          <strong data-en="CaptainPepe" data-ru="КапитанПепе">CaptainPepe</strong>
+          <small data-en="portfolio · node ops · memes" data-ru="портфолио · ноды · мемы">portfolio · node ops · memes</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#stack"     class="magnetic" data-en="Stack"    data-ru="Стек">Stack</a>
+        <a href="#featured"  class="magnetic" data-en="Cysic"    data-ru="Cysic">Cysic</a>
+        <a href="#projects"   class="magnetic" data-en="Projects" data-ru="Проекты">Projects</a>
+        <a href="#team"      class="magnetic" data-en="Team"     data-ru="Команда">Team</a>
+        <a href="#memes"     class="magnetic" data-en="Meme Lab" data-ru="Мем-лаб">Meme Lab</a>
+        <a href="#contact"   class="magnetic nav-cta" data-en="Contact" data-ru="Контакт">Contact</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <div class="socials socials-nav" aria-label="Social links">
+          <a href="https://t.me/I_am_Captain_Pepe" target="_blank" rel="noopener" aria-label="Telegram">
+            <img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="Telegram">
+          </a>
+          <a href="https://x.com/IamPurkov" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <img src="https://cdn.simpleicons.org/x/FFFFFF" alt="X">
+          </a>
+          <a href="https://discordapp.com/users/456868548825055253" target="_blank" rel="noopener" aria-label="Discord">
+            <img src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord">
+          </a>
+          <a href="https://youtube.com/@Purkov" target="_blank" rel="noopener" aria-label="YouTube">
+            <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube">
+          </a>
+          <a href="https://github.com/iamcaptainpepe" target="_blank" rel="noopener" aria-label="GitHub">
+            <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub">
+          </a>
+        </div>
+
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" id="langEn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" id="langRu" data-lang="ru" aria-pressed="false">RU</button>
+        </div>
+
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile navigation">
+        <a href="#stack"    class="magnetic" data-en="Stack"      data-ru="Стек">Stack</a>
+        <a href="#featured" class="magnetic" data-en="Cysic"      data-ru="Cysic">Cysic</a>
+        <a href="#projects" class="magnetic" data-en="Projects"   data-ru="Проекты">Projects</a>
+        <a href="#team"     class="magnetic" data-en="Team"       data-ru="Команда">Team</a>
+        <a href="#memes"    class="magnetic" data-en="Meme Lab"   data-ru="Мем-лаб">Meme Lab</a>
+        <a href="#contact"  class="magnetic" data-en="Contact"    data-ru="Контакт">Contact</a>
+      </nav>
+      <div class="socials socials-mobile" aria-label="Social links">
+        <a href="https://t.me/I_am_Captain_Pepe" target="_blank" rel="noopener" aria-label="Telegram"><img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="Telegram"></a>
+        <a href="https://x.com/IamPurkov" target="_blank" rel="noopener" aria-label="X"><img src="https://cdn.simpleicons.org/x/FFFFFF" alt="X"></a>
+        <a href="https://discordapp.com/users/456868548825055253" target="_blank" rel="noopener" aria-label="Discord"><img src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord"></a>
+        <a href="https://youtube.com/@Purkov" target="_blank" rel="noopener" aria-label="YouTube"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube"></a>
+        <a href="https://github.com/iamcaptainpepe" target="_blank" rel="noopener" aria-label="GitHub"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub"></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <p class="kicker hero-kicker" data-en="OPERATOR · OG · CYRUNNER" data-ru="ОПЕРАТОР · OG · CYRUNNER">OPERATOR · OG · CYRUNNER</p>
+          <h1 class="hero-name" id="heroName" data-en="Evgeny" data-ru="Евгений" aria-label="Evgeny — Purkov">Evgeny</h1>
+          <p class="hero-sub" data-en="Purkov · CaptainPepe" data-ru="Пурков · КапитанПепе">Purkov · CaptainPepe</p>
+          <p class="hero-role" data-en="Crypto operator · GPU node runner · community + meme maker"
+                       data-ru="Крипто-оператор · GPU-ноды · коммьюнити + мемы">Crypto operator · GPU node runner · community + meme maker</p>
+          <p class="hero-lead" data-en-html="I run GPU nodes, write the bots that keep them honest, grow communities, and <em>ship memes</em> for official pages."
+                       data-ru-html="Кручу GPU-ноды, пишу ботов, веду коммьюнити и делаю мемы для официальных страниц.">
+            I run GPU nodes, write the bots that keep them honest, grow communities, and <em>ship memes</em> for official pages.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary magnetic" href="https://t.me/I_am_Captain_Pepe" target="_blank" rel="noopener">
+              <img class="ic" src="https://cdn.simpleicons.org/telegram/FFFFFF" alt="" aria-hidden="true">
+              <span data-en="Telegram" data-ru="Telegram">Telegram</span>
+            </a>
+            <a class="btn btn-ghost magnetic" href="https://x.com/IamPurkov" target="_blank" rel="noopener">
+              <img class="ic" src="https://cdn.simpleicons.org/x/FFFFFF" alt="" aria-hidden="true">
+              <span data-en="X" data-ru="X">X</span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+          <ul class="pills" aria-label="Status">
+            <li class="pill"><span class="pill-dot"></span><span data-en="OG" data-ru="OG">OG</span></li>
+            <li class="pill"><span class="pill-dot"></span><span data-en="CyRunner" data-ru="CyRunner">CyRunner</span></li>
+            <li class="pill"><span class="pill-dot"></span><span data-en="GPU ops" data-ru="GPU-ноды">GPU ops</span></li>
+            <li class="pill"><span class="pill-dot"></span><span data-en="Memes" data-ru="Мемы">Memes</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-media">
+          <figure class="hero-avatar" aria-label="Pirate Pepe avatar">
+            <span class="orbit" aria-hidden="true"></span>
+            <span class="orbit o2" aria-hidden="true"></span>
+            <img src="assets/avatar.png" alt="CaptainPepe — pirate Pepe avatar" width="720" height="720">
+            <span class="float-tag ft1" data-en="GPU nodes" data-ru="GPU-ноды">GPU nodes</span>
+            <span class="float-tag ft2" data-en="meme lab" data-ru="мем-лаб">meme lab</span>
+          </figure>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#stack" aria-label="Scroll down">
+        <span data-en="scroll" data-ru="листай">scroll</span>
+        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <!-- ============ 01 · STACK ============ -->
+    <section class="section" id="stack">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker"><span class="sec-num" data-en="01" data-ru="01">01</span> · <span data-en="Now" data-ru="Сейчас">Now</span></p>
+          <h2 data-en="Hardware &amp; tools" data-ru="Железо и инструменты">Hardware &amp; tools</h2>
+          <p class="sec-lead" data-en="Enough to run GPU nodes, test ideas fast, and deliver."
+                       data-ru="Хватает, чтобы крутить GPU-ноды, быстро тестировать идеи и сдавать результат.">
+            Enough to run GPU nodes, test ideas fast, and deliver.
+          </p>
+        </header>
+
+        <div class="machines">
+          <article class="machine reveal" data-d="0">
+            <div class="machine-top">
+              <span class="chip-ic"><i data-lucide="cpu" aria-hidden="true"></i></span>
+              <h3 data-en="Dual EPYC 7k62" data-ru="Дуальный EPYC 7k62">Dual EPYC 7k62</h3>
+            </div>
+            <p class="machine-spec" data-en="512 GB RAM · RTX 3090 · Linux" data-ru="512 ГБ RAM · RTX 3090 · Linux">512 GB RAM · RTX 3090 · Linux</p>
+            <p class="machine-note" data-en="The main node rig. Heavy uptime, heavy RAM." data-ru="Главная машинка для нод. Тяжёлый аптайм, тяжёлая RAM.">The main node rig. Heavy uptime, heavy RAM.</p>
+          </article>
+          <article class="machine reveal" data-d="1">
+            <div class="machine-top">
+              <span class="chip-ic"><i data-lucide="server" aria-hidden="true"></i></span>
+              <h3 data-en="Xeon · 24 cores" data-ru="Xeon · 24 ядра">Xeon · 24 cores</h3>
+            </div>
+            <p class="machine-spec" data-en="64 GB RAM · RTX 3090" data-ru="64 ГБ RAM · RTX 3090">64 GB RAM · RTX 3090</p>
+            <p class="machine-note" data-en="Second line: testnets, bots, log farms." data-ru="Вторая линия: тестнеты, боты, ферма логов.">Second line: testnets, bots, log farms.</p>
+          </article>
+          <article class="machine reveal" data-d="2">
+            <div class="machine-top">
+              <span class="chip-ic"><img src="https://cdn.simpleicons.org/apple/FFFFFF" alt="Apple"></span>
+              <h3 data-en="MacBook M4 Pro" data-ru="MacBook M4 Pro">MacBook M4 Pro</h3>
+            </div>
+            <p class="machine-spec" data-en="24 GB · daily driver" data-ru="24 ГБ · повседневная машина">24 GB · daily driver</p>
+            <p class="machine-note" data-en="Montage, travel, and the stuff done between servers." data-ru="Монтаж, поездки и всё, что делается между серверами.">Montage, travel, and the stuff done between servers.</p>
+          </article>
+        </div>
+
+        <p class="subhead reveal" data-en="What runs on it" data-ru="Что на этом крутится">What runs on it</p>
+        <div class="tools">
+          <article class="tool reveal" data-d="0">
+            <span class="chip-ic"><img src="https://cdn.simpleicons.org/davinciresolve/233A51" alt="DaVinci Resolve"></span>
+            <h3 data-en="DaVinci Resolve" data-ru="DaVinci Resolve">DaVinci Resolve</h3>
+            <p data-en="Video editing and montages." data-ru="Видеомонтаж и ролик-монтажи.">Video editing and montages.</p>
+          </article>
+          <article class="tool reveal" data-d="1">
+            <span class="chip-ic"><img src="https://cdn.simpleicons.org/comfyui/F0FF41" alt="ComfyUI" onerror="this.onerror=null;this.removeAttribute('src');this.dataset.svg=1"></span>
+            <h3 data-en="Local LLMs" data-ru="Локальные LLM">Local LLMs</h3>
+            <p data-en="Images and video — generated on my own GPUs." data-ru="Картинки и видео — генерируются на моих же GPU.">Images and video — generated on my own GPUs.</p>
+          </article>
+          <article class="tool reveal" data-d="2">
+            <span class="chip-ic"><img src="https://cdn.simpleicons.org/ollama/FFFFFF" alt="Ollama"></span>
+            <h3 data-en="Local AI assistant" data-ru="Локальный AI-ассистент">Local AI assistant</h3>
+            <p data-en="A personal assistant living on my hardware. No cloud, no lag, no bills." data-ru="Персональный ассистент живёт на моём железе. Без облака, без лагов, без счетов.">A personal assistant living on my hardware. No cloud, no lag, no bills.</p>
+          </article>
+          <article class="tool reveal" data-d="3">
+            <span class="chip-ic"><i data-lucide="terminal" aria-hidden="true"></i></span>
+            <h3 data-en="Scripts &amp; node ops" data-ru="Скрипты и node ops">Scripts &amp; node ops</h3>
+            <p data-en="Bots, node monitoring, log analysis, anti-sybil. Infrastructure is a craft." data-ru="Боты, мониторинг нод, разбор логов, анти-сипил. Инфраструктура — это ремесло.">Bots, node monitoring, log analysis, anti-sybil. Infrastructure is a craft.</p>
+          </article>
+        </div>
+
+        <ul class="chips reveal" aria-label="Platforms">
+          <li class="chip"><img src="https://cdn.simpleicons.org/linux/FCC624" alt="">Linux</li>
+          <li class="chip"><img src="https://cdn.simpleicons.org/python/3776AB" alt="">Python</li>
+          <li class="chip"><img src="https://cdn.simpleicons.org/ollama/FFFFFF" alt="">Ollama</li>
+          <li class="chip"><img src="https://cdn.simpleicons.org/comfyui/F0FF41" alt="" onerror="this.onerror=null;this.removeAttribute('src');this.dataset.svg=1">ComfyUI</li>
+          <li class="chip"><img src="https://cdn.simpleicons.org/nvidia/76B900" alt="">NVIDIA</li>
+          <li class="chip"><img src="https://cdn.simpleicons.org/davinciresolve/233A51" alt="">DaVinci Resolve</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 02 · FEATURED — CYSIC ============ -->
+    <section class="section section-featured" id="featured">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker"><span class="sec-num">02</span> · <span data-en="Featured" data-ru="Флагман">Featured</span></p>
+          <h2 data-en="Cysic" data-ru="Cysic">Cysic</h2>
+        </header>
+
+        <article class="feature-card reveal tilt-card" id="cysicCard">
+          <div class="feature-id">
+            <span class="monogram mon-cy" aria-hidden="true">CY</span>
+            <h3 class="feature-name" data-en="Cysic" data-ru="Cysic">Cysic</h3>
+            <p class="feature-tag" data-en="GPU compute · CyRunners" data-ru="GPU-вычисления · CyRunners">GPU compute · CyRunners</p>
+          </div>
+          <div class="feature-body">
+            <p class="feature-role" data-en="OG + CyRunner Ambassador" data-ru="OG и амбассадор CyRunners">OG + CyRunner Ambassador</p>
+            <ul class="feature-badges">
+              <li class="badge"><span class="badge-dot"></span><span data-en="OG" data-ru="OG">OG</span></li>
+              <li class="badge"><span class="badge-dot"></span><span data-en="CyRunner" data-ru="CyRunner">CyRunner</span></li>
+              <li class="badge"><span class="badge-dot"></span><span data-en="Community" data-ru="Коммьюнити">Community</span></li>
+              <li class="badge"><span class="badge-dot"></span><span data-en="Official memes" data-ru="Официальные мемы">Official memes</span></li>
+              <li class="badge"><span class="badge-dot"></span><span data-en="GPU nodes" data-ru="GPU-ноды">GPU nodes</span></li>
+            </ul>
+            <p class="feature-copy"
+               data-en="Cysic — OG &amp; CyRunner Ambassador. Community work and official memes for the @cysic_xyz page. GPU nodes. Found the attack vectors that were used in the attack and helped the team shut those doors down."
+               data-ru="Cysic — OG и амбассадор CyRunners. Работа с коммьюнити и мемы для официальной страницы @cysic_xyz. GPU-ноды. Нашёл уязвимости, которые использовали в атаке, помог команде закрыть векторы.">
+              Cysic — OG &amp; CyRunner Ambassador. Community work and official memes for the @cysic_xyz page. GPU nodes. Found the attack vectors that were used in the attack and helped the team shut those doors down.
+            </p>
+            <div class="feature-links">
+              <a class="btn btn-ghost magnetic" href="https://cysic.xyz/" target="_blank" rel="noopener">
+                <span data-en="cysic.xyz" data-ru="cysic.xyz">cysic.xyz</span>
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <a class="btn btn-ghost magnetic" href="https://x.com/cysic_xyz" target="_blank" rel="noopener">
+                <img class="ic" src="https://cdn.simpleicons.org/x/FFFFFF" alt="" aria-hidden="true">
+                <span data-en="@cysic_xyz" data-ru="@cysic_xyz">@cysic_xyz</span>
+              </a>
+              <a class="btn btn-ghost magnetic" href="https://cysic.xyz/blog/cyrunners-ambassador-program/" target="_blank" rel="noopener">
+                <span data-en="Ambassador program" data-ru="Программа амбассадоров">Ambassador program</span>
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 03 · PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker"><span class="sec-num">03</span> · <span data-en="Projects" data-ru="Проекты">Projects</span></p>
+          <h2 data-en="Where the nodes ran" data-ru="Где крутились ноды">Where the nodes ran</h2>
+        </header>
+
+        <div class="projects">
+          <!-- Portal to Bitcoin -->
+          <article class="project-card reveal tilt-card" data-d="0">
+            <div class="project-top">
+              <span class="monogram mon-ptb" aria-hidden="true">PTB</span>
+              <span class="chip" data-en="Testnet" data-ru="Тестнет">Testnet</span>
+            </div>
+            <h3 data-en="Portal to Bitcoin" data-ru="Portal to Bitcoin">Portal to Bitcoin</h3>
+            <p class="project-sub" data-en="Bit Jelly · testnet ops &amp; bots" data-ru="Bit Jelly · тестнет-операции и боты">Bit Jelly · testnet ops &amp; bots</p>
+            <p class="project-copy"
+               data-en="Gave 10,000+ gas tokens to participants during testnet. Built Telegram bots for node tracking — ideas later adopted in the official Discord bot. Anti-sybil team: scripts plus tens of gigabytes of logs. Helped organize a meetup."
+               data-ru="Выдал участникам 10 000+ gas-токенов в тестнете. Сделал телеграм-боты для трекинга нод — идеи потом взяли в официальный Discord-бот. Команда анти-сипила: скрипты + десятки гигабайт логов. Помог организовать ивент.">
+              Gave 10,000+ gas tokens to participants during testnet. Built Telegram bots for node tracking — ideas later adopted in the official Discord bot. Anti-sybil team: scripts plus tens of gigabytes of logs. Helped organize a meetup.
+            </p>
+            <ul class="stat-row">
+              <li class="stat"><strong>10 000+</strong><span data-en="gas tokens" data-ru="gas-токенов">gas tokens</span></li>
+              <li class="stat"><strong>10s of GB</strong><span data-en="of logs" data-ru="логов">of logs</span></li>
+              <li class="stat"><strong>→</strong><span data-en="official Discord bot" data-ru="в офиц. Discord-бот">official Discord bot</span></li>
+            </ul>
+            <a class="project-link magnetic" href="https://portaltobitcoin.com/" target="_blank" rel="noopener">
+              <span data-en="portaltobitcoin.com" data-ru="portaltobitcoin.com">portaltobitcoin.com</span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Dill -->
+          <article class="project-card reveal tilt-card" data-d="1">
+            <div class="project-top">
+              <span class="monogram mon-dl" aria-hidden="true">DL</span>
+              <span class="chip" data-en="Events" data-ru="События">Events</span>
+            </div>
+            <h3 data-en="Dill" data-ru="Dill">Dill</h3>
+            <p class="project-sub" data-en="nodes &amp; event roles" data-ru="ноды и ивентовые роли">nodes &amp; event roles</p>
+            <p class="project-copy"
+               data-en="Ran nodes and handled event roles — from community check-ins to on-chain actions."
+               data-ru="Крутил ноды и отвечал за ивентовые роли — от чекинов в коммьюнити до on-chain действий.">
+              Ran nodes and handled event roles — from community check-ins to on-chain actions.
+            </p>
+            <a class="project-link magnetic" href="https://dill.xyz/" target="_blank" rel="noopener">
+              <span data-en="dill.xyz" data-ru="dill.xyz">dill.xyz</span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Inference -->
+          <article class="project-card reveal tilt-card" data-d="2">
+            <div class="project-top">
+              <span class="monogram mon-inf" aria-hidden="true">INF</span>
+              <span class="chip" data-en="Project" data-ru="Проект">Project</span>
+            </div>
+            <h3 data-en="Inference" data-ru="Inference">Inference</h3>
+            <p class="project-sub" data-en="long-term GPU nodes" data-ru="долгосрочные GPU-ноды">long-term GPU nodes</p>
+            <p class="project-copy"
+               data-en="Ran GPU nodes long-term — top of the dashboard."
+               data-ru="Долгосрочно крутил GPU-ноды — верх дашборда.">
+              Ran GPU nodes long-term — top of the dashboard.
+            </p>
+            <ul class="stat-row">
+              <li class="stat"><strong>long-term</strong><span data-en="uptime" data-ru="аптайм">uptime</span></li>
+              <li class="stat"><strong>#1</strong><span data-en="on the dashboard" data-ru="в дашборде">on the dashboard</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 · TEAM ============ -->
+    <section class="section" id="team">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker"><span class="sec-num">04</span> · <span data-en="Team" data-ru="Команда">Team</span></p>
+          <h2 data-en="Begunki Uzlov" data-ru="Begunki Uzlov">Begunki Uzlov</h2>
+          <p class="sec-lead" data-en="We join projects for infrastructure, anti-sybil, and automation."
+                       data-ru="Приходим в проекты за инфраструктурой, анти-сипилом и автоматизацией.">
+            We join projects for infrastructure, anti-sybil, and automation.
+          </p>
+        </header>
+        <div class="team-cards">
+          <article class="team-card reveal" data-d="0">
+            <span class="chip-ic"><i data-lucide="server" aria-hidden="true"></i></span>
+            <h3 data-en="Infrastructure" data-ru="Инфраструктура">Infrastructure</h3>
+            <p data-en="Nodes, rigs, networks — kept alive and kept honest." data-ru="Ноды, машины, сети — держим в живых и в порядке.">Nodes, rigs, networks — kept alive and kept honest.</p>
+          </article>
+          <article class="team-card reveal" data-d="1">
+            <span class="chip-ic"><i data-lucide="shield" aria-hidden="true"></i></span>
+            <h3 data-en="Anti-sybil" data-ru="Анти-сипил">Anti-sybil</h3>
+            <p data-en="Scripts and log forensics so the sybils never make the list." data-ru="Скрипты и лог-форензика, чтобы сипилы не добрались до списков.">Scripts and log forensics so the sybils never make the list.</p>
+          </article>
+          <article class="team-card reveal" data-d="2">
+            <span class="chip-ic"><i data-lucide="zap" aria-hidden="true"></i></span>
+            <h3 data-en="Automation" data-ru="Автоматизация">Automation</h3>
+            <p data-en="Bots and pipelines that do the boring 90% while we watch the fun 10%." data-ru="Боты и пайплайны, которые делают скучные 90%, пока мы смотрим на весёлые 10%.">Bots and pipelines that do the boring 90% while we watch the fun 10%.</p>
+          </article>
+        </div>
+        <p class="team-flavor reveal" data-en="Not a crew of influencers — a crew that reads logs." data-ru="Не банда инфлюенсеров — банда, которая читает логи.">Not a crew of influencers — a crew that reads logs.</p>
+      </div>
+    </section>
+
+    <!-- ============ 05 · MEME LAB ============ -->
+    <section class="section" id="memes">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker"><span class="sec-num">05</span> · <span data-en="Meme Lab" data-ru="Мем-лаб">Meme Lab</span></p>
+          <h2 data-en="Memes, rendered locally" data-ru="Мемы, рендеренные локально">Memes, rendered locally</h2>
+          <p class="sec-lead" data-en="High-quality local memes for communities — and official content for the Cysic X page. Made on my own hardware, shipped to the timeline."
+                       data-ru="Качественные локальные мемы для коммьюнити — и официальный контент для X-страницы Cysic. Сделано на моём железе, отправлено в таймлайн.">
+            High-quality local memes for communities — and official content for the Cysic X page. Made on my own hardware, shipped to the timeline.
+          </p>
+        </header>
+
+        <div class="posters">
+          <figure class="poster p1 reveal tilt-card" data-d="0">
+            <span class="poster-scan" aria-hidden="true"></span>
+            <span class="poster-ring" aria-hidden="true"></span>
+            <span class="poster-idx" data-en="M.01" data-ru="M.01">M.01</span>
+            <span class="poster-tag" data-en="CP × CY" data-ru="CP × CY">CP × CY</span>
+            <figcaption class="poster-cap" data-en="ComputeFi signal / CyRunner" data-ru="Сигнал ComputeFi / CyRunner">ComputeFi signal / CyRunner</figcaption>
+          </figure>
+          <figure class="poster p2 reveal tilt-card" data-d="1">
+            <span class="poster-barcode" aria-hidden="true"></span>
+            <span class="poster-idx">M.02</span>
+            <span class="poster-tag" data-en="CP / meme-lab" data-ru="CP / мем-лаб">CP / meme-lab</span>
+            <figcaption class="poster-cap" data-en="Nodes up. Logs down." data-ru="Ноды вверх. Логи вниз.">Nodes up. Logs down.</figcaption>
+          </figure>
+          <figure class="poster p3 reveal tilt-card" data-d="2">
+            <span class="poster-dots" aria-hidden="true"></span>
+            <span class="poster-idx">M.03</span>
+            <span class="poster-tag" data-en="CP × CY" data-ru="CP × CY">CP × CY</span>
+            <figcaption class="poster-cap" data-en="Official memes, unofficial energy." data-ru="Официальные мемы, неофициальная энергия.">Official memes, unofficial energy.</figcaption>
+          </figure>
+          <figure class="poster p4 reveal tilt-card" data-d="3">
+            <span class="poster-stripes" aria-hidden="true"></span>
+            <span class="poster-idx">M.04</span>
+            <span class="poster-tag" data-en="CP / meme-lab" data-ru="CP / мем-лаб">CP / meme-lab</span>
+            <figcaption class="poster-cap" data-en="Rendered locally. Zero cloud." data-ru="Рендер локально. Облака — нет.">Rendered locally. Zero cloud.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 · CONTACT ============ -->
+    <section class="section contact-sec" id="contact">
+      <div class="wrap">
+        <div class="contact reveal">
+          <div class="contact-copy">
+            <p class="kicker"><span class="sec-num">06</span> · <span data-en="Contact" data-ru="Контакт">Contact</span></p>
+            <h2 data-en="Got nodes to babysit? I've got time."
+                data-ru="Есть ноды, за которыми присмотреть? У меня есть время.">
+              Got nodes to babysit? I've got time.
+            </h2>
+            <p class="contact-sub" data-en="Fastest way — Telegram or X. Discord and YouTube also work."
+                         data-ru="Самый быстрый путь — Telegram или X. Discord и YouTube тоже работают.">
+              Fastest way — Telegram or X. Discord and YouTube also work.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary btn-lg magnetic" href="https://t.me/I_am_Captain_Pepe" target="_blank" rel="noopener">
+              <img class="ic" src="https://cdn.simpleicons.org/telegram/FFFFFF" alt="" aria-hidden="true">
+              <span data-en="Telegram" data-ru="Telegram">Telegram</span>
+            </a>
+            <a class="btn btn-ghost btn-lg magnetic" href="https://x.com/IamPurkov" target="_blank" rel="noopener">
+              <img class="ic" src="https://cdn.simpleicons.org/x/FFFFFF" alt="" aria-hidden="true">
+              <span data-en="X" data-ru="X">X</span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-ghost btn-lg magnetic" href="https://discordapp.com/users/456868548825055253" target="_blank" rel="noopener">
+              <img class="ic" src="https://cdn.simpleicons.org/discord/5865F2" alt="" aria-hidden="true">
+              <span data-en="Discord" data-ru="Discord">Discord</span>
+            </a>
+            <a class="btn btn-ghost btn-lg magnetic" href="https://youtube.com/@Purkov" target="_blank" rel="noopener">
+              <img class="ic" src="https://cdn.simpleicons.org/youtube/FF0000" alt="" aria-hidden="true">
+              <span data-en="YouTube" data-ru="YouTube">YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <a class="brand brand-f" href="#top">
+        <span class="brand-mark">CP</span>
+        <span class="brand-text"><strong data-en="CaptainPepe" data-ru="КапитанПепе">CaptainPepe</strong></span>
+      </a>
+      <p class="footer-mid" data-en="© 2026 Evgeny Purkov · built on my own hardware · Gomel, Belarus"
+                   data-ru="© 2026 Евгений Пурков · собрано на моём железе · Гомель, Беларусь">
+        © 2026 Evgeny Purkov · built on my own hardware · Gomel, Belarus
+      </p>
+      <div class="socials" aria-label="Social links">
+        <a href="https://t.me/I_am_Captain_Pepe" target="_blank" rel="noopener" aria-label="Telegram"><img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="Telegram"></a>
+        <a href="https://x.com/IamPurkov" target="_blank" rel="noopener" aria-label="X"><img src="https://cdn.simpleicons.org/x/FFFFFF" alt="X"></a>
+        <a href="https://discordapp.com/users/456868548825055253" target="_blank" rel="noopener" aria-label="Discord"><img src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord"></a>
+        <a href="https://youtube.com/@Purkov" target="_blank" rel="noopener" aria-label="YouTube"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube"></a>
+        <a href="https://github.com/iamcaptainpepe" target="_blank" rel="noopener" aria-label="GitHub"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
